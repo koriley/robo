@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  
+</head>
+
+<body>
+  <!--You can change the dimensions of the camera with height and weight, (text align and margin is just for center the image)-->
+<div id="camdemo" style="width: 320px; height: 240px; text-align: center; margin: 0 auto;"></div>
+<br>
+<div style="text-align:center;">
+    <input type="button" id="start" value="Start / Shut down camera"/>
+</div>
+
+  <script language="JavaScript">
+  
+  // A flag to know when start or stop the camera
+var enabled = false;
+// Use require to add webcamjs
+var WebCamera = require("cos-webcamjs");
+
+
+     WebCamera.attach('#camdemo');
+    
+	
+  </script>
+
+  
+
+</body>
+
 </html>
